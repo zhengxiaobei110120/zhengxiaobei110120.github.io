@@ -1,35 +1,64 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="zh">
 
 <head>
-	<title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>图片翻转动画练习</title>
+    <style>
+    body {
+        font: 300 14px/24px Arial;
+        margin: 12px;
+    }
+
+    .card-container {
+        cursor: pointer;
+        height: 400px;
+        perspective: 200;
+        position: relative;
+        width: 400px;
+    }
+
+    .card {
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+
+    .side {
+        backface-visibility: hidden;
+        border-radius: 6px;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .back {
+        background: #eaeaed;
+        color: #0087cc;
+        line-height: 150px;
+        text-align: center;
+        transform: rotateY(180deg);
+    }
+    </style>
 </head>
-<p><img src="img/jellyfish.jpg" alt="小天才"></p>
-<p><img src="http://p0.so.qhimg.com/bdr/_240_/t01b461995344071915.jpg" alt="小天才"></p>
-<table border="1">
-	<meta charset="utf-8">
-	<thead>
-		<tr>
-			<th>序号</th><th>姓名</th><th>性别</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>data</td>
-			<td>单元格</td>
-			<td>单元格</td>
-		</tr>
-	</tbody>
-</table>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
+
 <body>
-
+    <h1>图片翻转效果</h1>
+    <div class="card-container">
+        <div class="card">
+            <div class="side"><img src="http://n.sinaimg.cn/collect/crawl/20160314/1roN-fxqhmve9176696.jpg" alt="唯美"></div>
+            <div class="side back">唯美</div>
+        </div>
+    </div>
 </body>
-</html>>
+
+</html>
